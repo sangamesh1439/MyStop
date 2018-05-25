@@ -1,1 +1,1 @@
-# MyStop
+# Sample shop website
