@@ -587,7 +587,7 @@ if (typeof document !== 'undefined') {
           scrollTop: (0, _jquery2.default)(hash).offset().top
         }, 900, function () {
 
-          // Add hash (#) to URL when done scrolling (default click behavior)
+          //  Add hash (#) to URL when done scrolling (default click behavior)
           window.location.hash = hash;
         });
       } // End if
@@ -1791,4 +1791,4 @@ function toComment(sourceMap) {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.6ac674b5.js.map
+//# sourceMappingURL=static.3b80daf2.js.map
