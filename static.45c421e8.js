@@ -527,7 +527,7 @@ var App = function App() {
         _react2.default.createElement(
           _reactStatic.Link,
           { exact: true, to: '/' },
-          'Home'
+          'Home0'
         ),
         _react2.default.createElement(
           _reactStatic.Link,
@@ -1528,4 +1528,4 @@ function toComment(sourceMap) {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.2f98c64c.js.map
+//# sourceMappingURL=static.45c421e8.js.map
