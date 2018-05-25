@@ -569,40 +569,42 @@ var App = function App() {
   );
 };
 
-(0, _jquery2.default)(document).ready(function () {
-  // Add smooth scrolling to all links in navbar + footer link
-  (0, _jquery2.default)(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+if (typeof document !== 'undefined') {
+  (0, _jquery2.default)(document).ready(function () {
+    // Add smooth scrolling to all links in navbar + footer link
+    (0, _jquery2.default)(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
+        // Store hash
+        var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      (0, _jquery2.default)('html, body').animate({
-        scrollTop: (0, _jquery2.default)(hash).offset().top
-      }, 900, function () {
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        (0, _jquery2.default)('html, body').animate({
+          scrollTop: (0, _jquery2.default)(hash).offset().top
+        }, 900, function () {
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+
+    (0, _jquery2.default)(window).scroll(function () {
+      (0, _jquery2.default)(".slideanim").each(function () {
+        var pos = (0, _jquery2.default)(this).offset().top;
+
+        var winTop = (0, _jquery2.default)(window).scrollTop();
+        if (pos < winTop + 600) {
+          (0, _jquery2.default)(this).addClass("slide");
+        }
       });
-    } // End if
-  });
-
-  (0, _jquery2.default)(window).scroll(function () {
-    (0, _jquery2.default)(".slideanim").each(function () {
-      var pos = (0, _jquery2.default)(this).offset().top;
-
-      var winTop = (0, _jquery2.default)(window).scrollTop();
-      if (pos < winTop + 600) {
-        (0, _jquery2.default)(this).addClass("slide");
-      }
     });
   });
-});
+}
 
 exports.default = (0, _reactHotLoader.hot)(module)(App);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)(module)))
@@ -1789,4 +1791,4 @@ function toComment(sourceMap) {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.ad748076.js.map
+//# sourceMappingURL=static.6ac674b5.js.map
